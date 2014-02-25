@@ -57,12 +57,12 @@ a.unmark {
 	top:0px;*/
 }
 #content {
-	font-family: 'PT Sans Narrow', sans-serif;
+	font-family: 'PT Sans', sans-serif;
 	background-color:#555555;
 	width:900px;
 	margin:0 auto;
 	margin-top:100px;
-	border-radius:5px;
+	/*border-radius:5px;*/
 	border: 1px #a4a4a4 solid;
 }
 a.anchor {
@@ -93,7 +93,7 @@ h2 span {
 }
 #faqdiv {
 }
-#registerdiv {
+#sponsorsdiv {
 }
 footer {
 	padding-bottom:10px;
