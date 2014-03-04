@@ -6,6 +6,7 @@ body {
 	margin:0;
 	background:#000;
 	color:#fff;
+	min-width:940px;
 }
 
 nav {
@@ -55,6 +56,17 @@ a.unmark {
 	/*position:absolute;
 	top:0px;*/
 }
+#banner {
+	background: url(../img/banner.jpg) no-repeat center center;
+	width: 100%;
+	height:500px;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover:
+	margin-top:100px;
+	z-index:-2;
+}
 #content {
 	font-family: 'PT Sans', sans-serif;
 	/*background-color:#555555;*/
@@ -62,9 +74,10 @@ a.unmark {
 	color:#000;
 	width:900px;
 	margin:0 auto;
-	margin-top:100px;
 	/*border-radius:5px;*/
 	border: 1px #a4a4a4 solid;
+	position:relative;
+	top: -75px;
 }
 a.anchor {
 	display:block;
