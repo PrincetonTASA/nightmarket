@@ -71,9 +71,11 @@ a.unmark {
 	font-family: 'PT Sans', sans-serif;
 	/*background-color:#555555;*/
 	background-color:#fff;
+	overflow:auto;
 	color:#000;
 	width:900px;
 	padding:5px;
+	height:auto;
 	margin:0 auto;
 	/*border-radius:5px;*/
 	border: 1px #a4a4a4 solid;
@@ -120,12 +122,36 @@ h2 span {
 	background-color:rgb(178,90,237);
 }
 #faqdiv .q {
-	font-size:20px;
+	font-size:25px;
 }
 #faqdiv .a {
 	font-size:20px;
 }
-#clubsdiv {
+#perfdiv {
+	font-size:20px;
+	background-color:rgb(95,195,245);
+}
+#clubdiv {
+	font-size:20px;
+	background-color:rgb(245,127,38);
+}
+#clubdiv2{
+	position:relative;
+	top:0;
+	width:50%;
+	height:425px;
+	background-color:green;
+	float:right;
+	margin:0;
+	padding:0;
+}
+#clubdiv1 {
+	margin:0;
+	font-size:20px;
+	width:50%;
+	float:left;
+	height:425px;
+	background-color:blue;
 }
 footer {
 	padding-bottom:10px;
