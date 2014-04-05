@@ -1,94 +1,102 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>TASA Night Market</title>
-		<link href='http://fonts.googleapis.com/css?family=Oswald:300,400' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
-		<link href='css/index.css' rel='stylesheet' type='text/css'>
-		<link rel='icon' type='image/jpeg' href='img/taiwan.jpg'>
-	</head>
-	<body>
-		<nav>
-		<div id='headdiv'>
-			<a href='#' class='unmark'><span id='logo'>TASA NIGHT MARKET</span></a>
-			<a href='#faq' class='unmark'><span class='navbutt'>FAQ</span></a>
-			<a href='#about' class='unmark'><span class='navbutt'>ABOUT</span></a>
-			<a href='#clubs' class='unmark'><span class='navbutt'>CLUBS</span></a>
-		</div>
-		</nav>
-		<div id='banner'>
-		</div>
-		<div id='content'>
-			<a id='about' class='anchor'></a>
-			<h2><span>ABOUT</span></h2>
-			<div id='aboutdiv' class='contentdiv'>
-				<p style='font-size:40px'>
-				<span id='date'>APRIL 11.</span><br>
-				<span id='place'>EAST PYNE COURTYARD.</span><br>
-				<span id='time'>8-11PM.</span>
-				</p>
-				You don't want to miss this.
-			</div>
+<head>
+	<title>Night Market 2014</title>
+	<link href="http://fonts.googleapis.com/css?family=Oswald:300,400" rel="stylesheet" type="text/css">
+	<link href="css/index.css" rel="stylesheet" type="text/css">
+	<link rel="icon" type="image/jpeg" href="img/taiwan.jpg">
 
-			<a id='faq' class='anchor'></a>
-			<h2><span>FAQ</span></h2>
-			<div id='faqdiv' class='contentdiv'>
-				<p>
-				<span class='q'>what, really, is a night market?</span><br>
-				<span class='a'> Common throughout all of Taiwan, they attract crowds of people to their intricate alleys full of cheap and delicious food stands and shops.
-					You can find the latest styles of clothing, cute accessories, and even glasses and phone cases for the lowest prices (if you know how to haggle.)</span>
-				</p>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			midclick = false;
+			$('.contdiv').click(function() {
+				if(midclick)
+					return;
+				midclick = true;
+				//$('.contdiv').hide();
+				$(this).show();
+				$(this).css({'z-index':'100'});
+				$(this).animate({width: '900px', height:'900px'}, 1000, function() {
+					/*$(this).fadeOut(1000, function() {
+						$('#'+$(this).attr('id')+'text').fadeIn(1000);
+					});*/
+					$(this).css({'z-index':'1'});
+					$('#'+$(this).attr('id')+'text').css({'z-index':'0'});
+					$('#'+$(this).attr('id')+'text').show();
+					$(this).fadeOut(500, function() {
+						$(this).css({'z-index':'0'});
+					});
+
+					midclick = false;
+				});
+
+			});
+			$('.text').click(function() {
+				if(midclick)
+					return;
+				midclick = true;
+				a = $(this).attr('id').replace('text', '');
+				$('#'+a).show();
 				
-				<p>
-				<span class='q'>that sounds awesome! do I need to buy tickets?</span><br>
-				<span class='a'>Night Market tickets (to exchange for food - entry is free!) will be sold at table 1 in Frist, 4/7 - 4/10 from 8 to 10 pm.
-					You get 2 free tickets with your PUID!</span>
-				</p>
-				<p>
-				<span class='q'>do you have anything else planned for tickets?</span><br>
-				<span class='a'>Good thing you asked! We will be holding a RAFFLE for a chance to win extra tickets! (And the free food that comes with it!!!) 
-					To enter, all you have to do is take a picture of yourself with your Night Market ticket(s) at the TASA table in Frist,
-					and then upload the picture on Facebook (by posting on this <a href='https://www.facebook.com/events/1466169646949488/' class='undec'>page</a>
-					and/or tagging <a href='https://www.facebook.com/princetontasa' class='undec'>Princeton TASA</a>).</span>
-				</p>
+				$(this).css({'z-index':'101'});
+				$('#'+a).css({'z-index':'100'});
+				$(this).fadeOut(500, function() {
+					
+					$('#'+a).animate({width: '450px', height:'450px'}, 1000, function() {
+						$('.contdiv').fadeIn(1000);
+						$('#'+a).css({'z-index':'0'});
+						$(this).css({'z-index':'0'});
+						midclick = false;
+					});
+				});
+				
+			});
+		});
+	</script>
+</head>
+<body>
+	<nav>
+		<div id="headdiv">
+			<a href="#" class="unmark"><span id="logo">NIGHT MARKET 2014</span></a>
+		</div>
+	</nav>
+	<div id="banner">
+	</div>
+	<div id="content">
+		<div id="container">
+			<div class="contdiv" id="about">
+				<div class="desc">ABOUT</div>
+			</div>
+			<div class="contdiv" id="food">
+				<div class="desc">FOOD &amp; FAQ</div>
+			</div>
+			<div class="contdiv" id="perf">
+				<div class="desc">PERFORMANCES</div>
+			</div>
+			<div class="contdiv" id="clubs">
+				<div class="desc">CLUBS &amp; SPONSORS</div>
 			</div>
 
-			<a id='clubs' class='anchor'></a>
-			<h2><span>PARTICIPATING CLUBS & SPONSORS</span></h2>
-			<div id='perfdiv' class='contentdiv'>
-				<!--<div id='clubdiv1'>
-					Old Nassoul<br>
-				</div><div id='clubdiv2'></div>-->
-				<span style='font-size:25px'>Performances by:</span><br>
-				Old Nassoul<br>
-				Wildcats<br>
-				Body Hype<br>
-				Triple 8<br>
-				Disiac<br>
-				Ballet Folklorico<br>
-				Tora Taiko<br>
-				Songline<br>
-				Bhangra<br>
-				Sympoh<br>
-				VTone
+			<div class="text" id="abouttext">
+				<span style="font-size:40px">
+					APRIL 11.<br>
+					EAST PYNE COURTYARD.<br>
+					8-11PM.<br><br>
+				</span>
+				you don't want to miss this.
 			</div>
-			<div id='clubdiv' class='contentdiv'>
-				<span style='font-size:25px'>Cultural Groups:</span><br>
-				CSA<br>
-				AASA<br>
-				CAUSA<br>
-				JSA<br>
-				SASA<br>
-				KASA<br>
-				VSA<br>
-				BUS<br>
-				MASA<br>
-				Thaigers<br>
+			<div class="text" id="foodtext">
+				asdf
 			</div>
-			<div id='sponsordiv' class='contentdiv'>
-				Sponsored by Projects Board
+			<div class="text" id="perftext">
+				asdf
 			</div>
-			<footer>&copy; design by <a href='http://clementl.com'>clement lee</a> 2014</footer>
+			<div class="text" id="clubstext">
+				asdf
+			</div>
 		</div>
-	</body>
+		<footer>&copy; design by <a href="http://clementl.com">clement lee</a> 2014</footer>
+	</div>
+</body>
 </html>
