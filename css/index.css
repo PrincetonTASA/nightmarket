@@ -95,15 +95,15 @@ h2 span {
 	padding:0;
 	position:relative;
 	margin:0;
-
 }
 
-.contdiv{
+.contdiv {
 	width:450px;
 	position:absolute;
 	height:450px;
 	padding:0;
 	float:left;
+	z-index:0;
 	margin:0;
 	transition: box-shadow 0.3s;
 }
@@ -138,7 +138,7 @@ h2 span {
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
 	-o-background-size:cover;
-	background-size:cover
+	background-size:cover;
 	top:0;
 	left:0;
 }
@@ -200,11 +200,13 @@ h2 span {
 }
 
 #perftext {
+
 	background-color:rgb(3,217,254);
 
 }
 
 #clubstext {
+	padding:100px;
 	background-color:rgb(0,239,16);
 
 }

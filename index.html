@@ -17,15 +17,15 @@
 				//$('.contdiv').hide();
 				$(this).show();
 				$(this).css({'z-index':'100'});
-				$(this).animate({width: '900px', height:'900px'}, 1000, function() {
+				$(this).animate({width: '900px', height:'900px'}, 700, function() {
 					/*$(this).fadeOut(1000, function() {
 						$('#'+$(this).attr('id')+'text').fadeIn(1000);
 					});*/
 					$(this).css({'z-index':'1'});
-					$('#'+$(this).attr('id')+'text').css({'z-index':'0'});
+					$('#'+$(this).attr('id')+'text').css({'z-index':''});
 					$('#'+$(this).attr('id')+'text').show();
-					$(this).fadeOut(500, function() {
-						$(this).css({'z-index':'0'});
+					$(this).fadeOut(300, function() {
+						$(this).css({'z-index':''});
 					});
 
 					midclick = false;
@@ -41,12 +41,12 @@
 				
 				$(this).css({'z-index':'101'});
 				$('#'+a).css({'z-index':'100'});
-				$(this).fadeOut(500, function() {
+				$(this).fadeOut(300, function() {
 					
-					$('#'+a).animate({width: '450px', height:'450px'}, 1000, function() {
-						$('.contdiv').fadeIn(1000);
-						$('#'+a).css({'z-index':'0'});
-						$(this).css({'z-index':'0'});
+					$('#'+a).animate({width: '450px', height:'450px'}, 700, function() {
+						$('.contdiv').fadeIn(700);
+						$('#'+a).css({'z-index':''});
+						$(this).css({'z-index':''});
 						midclick = false;
 					});
 				});
@@ -89,13 +89,51 @@
 				Join the <a href="https://www.facebook.com/events/1466169646949488/?notif_t=plan_user_joined">Facebook event</a> now!
 			</div>
 			<div class="text" id="foodtext">
-				asdf
+				<span style="font-size:40px">
+					How do I get in?<br>
+				</span>
+				Entry is free! Come visit for the performances or for the food.<br><br>
+				<span style="font-size:40px">
+					So how do I get food?<br>
+				</span>
+				Glad you asked! You can get food from any booth in exchange for tickets.<br><br>
+				<span style="font-size:40px">
+					OK, sounds cool&mdash;so what's a ticket?<br>
+				</span>
+				Nothing too special, it's just a slip of paper! Maybe you ought to ask how you get tickets!<br><br>
+				<span style="font-size:40px">
+					Fair enough. How do I get tickets?<br>
+				</span>
+				Tickets will be sold at table 1 in Frist, 4/7 - 4/10 from 8 to 10 pm. You get 2 free tickets with your PUID!<br>
+				Also, we will be holding a RAFFLE for a chance to win extra tickets! (And the free food that comes with it!!!) To enter, all you have to do is take a picture of yourself with your Night Market ticket(s) at the TASA table in Frist, and then upload the picture on Facebook (by posting on the <a href="https://www.facebook.com/events/1466169646949488/">event page</a> and/or tagging <a href="https://www.facebook.com/princetontasa">Princeton TASA</a>).<br>
+				<br>
+
 			</div>
 			<div class="text" id="perftext">
-				asdf
+				<span style="font-size:50px">
+					Enjoy performances from<br><br>
+				</span>
+				diSiac<br> VTone<br> Wildcats<br> Bhangra<br> BodyHype<br> Songline<br> Lobster Club<br> Old Nassoul<br> Raks Odalisque<br> Tora Taiko<br> Triple 8<br> Ballet Folklorico<br> and Sympoh!
 			</div>
 			<div class="text" id="clubstext">
-				asdf
+				<span style="font-size:50px">
+					Get ready to eat food from<br>
+				</span>
+				TASA (of course)<br>
+				CSA<br>
+				JSA<br>
+				KASA<br>
+				CAUSA<br>
+				Thaigers<br>
+				BUS<br>
+				VSA<br>
+				MASA<br>
+				AASA<br>
+				SASA<br><br>
+				<span style="font-size:50px">
+					Many thanks to our sponsors<br>
+				</span>
+				Princeton in Asia<br> the Princeton Institute for International and Religious Studies<br> the Department of Electrical Engineering<br> the Department of East Asian Studies<br> the East Asian Studies Program<br> and Projects Board.
 			</div>
 		</div>
 		<footer>&copy; design by <a href="http://clementl.com">clement lee</a> 2014</footer>
